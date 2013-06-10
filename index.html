@@ -1,169 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta name="microid" content="mailto+http:sha1:d420b79a2fd04aeccbb6fa59d37c5e5c48cebd05" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
+		 
 		<title>Артём Полюхович - Nergal</title>
 		
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,300,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css" />
 		
-		<link rel="stylesheet" type="text/css" media="all"  href="http://oocss.org/css/libraries.css" />
-		<link rel="stylesheet" type="text/css" media="all"  href="http://oocss.org/css/template.css" />
-		<link rel="stylesheet" type="text/css" media="all" href="http://oocss.org/css/grids.css" />
-		<link rel="stylesheet" type="text/css" media="all" href="http://oocss.org/css/content.css" />
-		
-		<style type="text/css">
-			.page{background:rgba(255,255,255,0.9);margin:1em auto;padding:1em;border-radius:16px;width:50em;border:1px solid #000}
-			li{font:16px/22px 'Open Sans',sans-serif; text-align:justify;font-weight:400}
-			li.simpleList{padding-bottom: 0.3em}
-			a{font-weight:400}
-			h1{font-size:5.5em;color:#000}
-			h2{color:#333}
-			h3{color:#444}
-			h1,h2,h3,.main li{font-family:'Open Sans',sans-serif;font-weight:300}
-			.main li span{min-width:12em;display:block;float:left;font-size:0.9em}
-			.main ul ul{margin-left:10em}
-			abbr{border-bottom:1px dashed #999}
-			ul.simpleList ul{margin-left:0}
-			li img {display:inline-block}
-			hr {border-color:#333;border-bottom-width:1px;}
-			
-			html, body {
-				background-color: transparent;
-				background-image:
-					url(top.png),
-					url(bg3.gif),
-					url(bg2.gif),
-					url(bg1.gif),
-					url(bg0.gif);
-			}
-		</style>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+
+
+	<style type="text/css">
+		.container {padding-top:4em;}
+		h1{font-family:'PT Sans Narrow',sans-serif;color:#333;margin-bottom:0.3em;padding:0px}
+		h3{color:#333;font-weight:normal;letter-spacing:-1px;margin-bottom: 0px}
+		h4{margin:0px 0px 1em 0px;font-weight:normal;letter-spacing:-1px}
+		article,section{margin-bottom:2em}
+		article{border-top:1px dotted #ccc}
+		table.tech td{padding-left:.75em;letter-spacing:-.04em}
+		table.tech th{font-weight:normal;padding-right:.75em;text-align:right;color:#999;padding-bottom:5px;border-right:solid 2px #ddd}
+		span.dates{font-weight:normal;letter-spacing:-1px;font-size:0.8em;}
+
+		.iconset{text-align:center;position:fixed;bottom:2em;width:64px}
+		.icon{text-indent:-9999px;width:64px;height:64px;display:block}
+		.icon.github{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_black-64.png) no-repeat}
+		.icon.linkedin{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-64.png)no-repeat}
+		.icon.blog{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/rss_circle_black-64.png) no-repeat}
+		.icon.skype{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/skype_circle_black-64.png) no-repeat}
+
+		@media (max-width: 767px) {
+			.iconset{position:static;width:280px}
+			.iconset .icon{display:inline-block}
+		}
+	</style>
+
 	</head>
-	<body>
-		<div class="page vcard">
-			<div class="head">
-				<h1 class="txtC fn n"><span class="given-name">Артём</span> <span class="family-name">Полюхович</span></h1>
-				<h2 class="txtR title">Web-разработчик</h2>
-			</div>
-			
-			
-			<div class="body">
-				<hr />
-				
-				<div class="main">
-					<h3>Общая информация</h3>
-					<ul>
-						<li><span>Имя, Фамилия:</span> Артём Полюхович</li>
-						<li><span>Дата рождения:</span> 22 мая 1988</li>
-						<li><span>Пол:</span> мужской</li>
-						<li><span>Семейное положение:</span> холост</li>
-					</ul>
-					
-					<hr />
+	<body>		
+		<div class="container">
+			<div class="row">
+				<div class="span3 vcard">
+					<h1 class="n fn"><span class="given-name">Артём</span><br /><span class="family-name">Полюхович</span></h1>
+					<div class="iconset">
+						<a class="icon skype" href="skype:nergal-tjs?chat">Skype</a>
+						<a class="icon linkedin" href="http://linkedin.com/-me-">Linkedin</a>
+						<a class="icon github" href="http://github.com/nergal">Github</a>
+						<a class="icon blog" href="http://blog.2mio.com/">Блог</a>
+					</div>
+
 				</div>
-				<div class="main">
-					<h3>Профессиональные навыки</h3>
-					<ul class="simpleList">
-						<li>Отличное знание <a href="http://php.net/">PHP5</a></li>
-						<li>Строгий <abbr>ООП</abbr>-подход</li>
-						<li>Применение паттернов проектирования</li>
-						<li>Понимание и оправданное применение технологий <abbr>AJAX</abbr>, <abbr>REST</abbr>, <abbr>ORM</abbr>, <abbr>MVC</abbr>, <abbr>Signal/Slot</abbr></li>
-						<li>Базы данных: <a href="http://www.mysql.com/">MySQL</a>, <a href="http://www.sqlite.org/">SQLite</a>; знание и понимание механизмов <abbr>репликации</abbr>, <abbr>партиционирования</abbr> и <abbr>шардинга</abbr></li>
-						<li>Опыт в конфигурировании серверов <a href="http://sysoev.ru/nginx/">nginx</a>, <a href="http://www.mysql.com/">MySQL</a>, <a href="http://apache.org/httpd/">Apache</a></li>
-						<li>Понимание различных тактик кэширования данных, опыт разработки обертки для модуля <a href="http://memcached.org/">memcached</a> с поддержкой тегирования и устойчивой к <abbr>dogpile-эффекту</abbr> (на основе оптимистической блокировки).</li>
-						<li>Опыт разработки с фреймворками на <abbr>PHP</abbr> (<a href="http://framework.zend.com/">Zend Framework</a>, <a href="http://kohanaframework.org/">Kohana</a>), <abbr>Javascript</abbr> (<a href="http://jquery.com">jQuery</a>), <abbr>CSS</abbr> (<a href="http://oocss.org">ooCSS</a>), <a href="http://nodejs.org">node.js</a></li>
-						<li>Базовые знания <a href="http://python.org/">Python</a> и <a href="http://djangoproject.com">Django</a></li>
-						<li>Опытный пользователь rpm- и deb-based дистрибутивов Linux, как в серверной, так и в декстопной версиях; базовые навыки работы с сорцовыми дистрибутивами (Gentoo в частности)</li>
-						<li>Опыт разворачивания системы разработки и деплоя (<a href="http://php.net/">PHP</a>/<abbr>PHP-FPM</abbr>, <a href="http://www.mysql.com/">MySQL</a>, <a href="http://sysoev.ru/nginx/">nginx</a>, <abbr>SCM</abbr> <a href="http://git-scm.com/">git</a> (<a href="http://eagain.net/gitweb/?p=gitosis.git">gitosis</a>, <a href="http://hjemli.net/git/cgit/about/">cgit</a>), <a href="http://framework.zend.com/">Zend Framework</a>, <a href="http://kohanaframework.org/">Kohana</a>, <abbr>CIS</abbr> <a href="http://jenkins-ci.org/">jenkins</a>, <a href="http://python.org/">Python</a>, <a href="http://djangoproject.com/">Django</a>), <abbr>CDN</abbr>-систем c нуля</li>
-					</ul>
+				<div class="span9">
+					<section>
+						<h3>Общая информация</h3>
+						<ul class="circle">
+							<li>25 лет, холост</li>
+							<li>Зарабатываю разработкой уже 7 год</li>
+							<li>Владею украинским, русским и английским языками</li>
+							<li>Участвовал и майнтейнил ряд open-source проектов</li>
+						</ul>
+					</section>
+
+					<section>
+						<table class='tech'>
+							<tr><th>Языки</th><td>PHP, Python, Javascript, Java, Shell</td></tr>
+							<tr><th>Фреймворки</th><td>Kohana, Zend, Yii</td>
+							<tr><th>Сервера</th><td>PHP-FPM, MySQL, nginx, Node.js</td></tr>
+							<tr><th>Ключевые слова</th><td>git, ci, кэширование, cdn, репликация, шардинг, round robin, ООП, ООД, linux</td></tr>
+						</table>
+					</section>
 					
-					<hr />
-				</div>
-				
-				<div class="main">
-					<h3>Профессиональный опыт</h3>
-					<ul>
-						<li><span>Период:</span> февраль 2012 — наст. время</li>
-						<li><span>Место работы:</span> <a href="http://openmedia.com.ua/" class="affiliation">Медиа-холдинг "Open Media Group"</a></li>
-						<li><span>Должность:</span> Технический директор, CTO</li>
-						<li><span>Обязанности:</span>
-							<ul class="simpleList">
+					<section>
+						<article>
+							<h3>Медиа-холдинг "Open Media Group"</h3>
+							<h4>Технический директор, CTO <span class="pull-right dates label label-inverse">февраль 2012 — февраль 2013</span></h4>
+
+							<ul class="circle">
 								<li>Планирование и управление ресурсами IT холдинга.</li>
 								<li>Приоретизация задач из соображений интересов бизнеса.</li>
 								<li>Коммуникация с заказчиком, формирование бизнес-требований.</li>
+								<li>Разработка обертки для модуля memcached с поддержкой тегирования и устойчивой к dogpile-эффекту (на основе оптимистической блокировки)</li>
+								<li>Организация инфраструктуры деплоймента</li>
 							</ul>
-						</li>
-					</ul>
-					
-					<ul>
-						<li><span>Период:</span> апрель 2010 — январь 2012</li>
-						<li><span>Место работы:</span> <a href="http://openmedia.com.ua/" class="affiliation">Медиа-холдинг "Open Media Group"</a></li>
-						<li><span>Должность:</span> Ведущий программист группы развития проектов</li>
-						<li><span>Обязанности:</span>
-							<ul class="simpleList">
+						</article>
+						
+						<article>
+							<h3>Медиа-холдинг "Open Media Group"</h3>
+							<h4>Ведущий программист группы развития проектов <span class="pull-right dates label label-inverse">апрель 2010 — январь 2012</span></h4>
+
+							<ul class="circle">
 								<li>Проектирование архитектуры и разработка сайтов <a href="http://www.likar.info/" rel="nofollow">Likar.info</a>, <a href="http://www.uaua.info/" rel="nofollow">Uaua.info</a> и <a href="http://bt-lady.com.ua/" rel="nofollow">xo4y.ua</a> (PHP), сопровождение и доработка сайта <a href="http://aromart.ua/" rel="nofollow">Aromart.ua</a> (Python/Django).</li>
 								<li>Разработка внутренних проектов холдинга - новогодних спец. проектов и универсализированной CMS для проведения конкурсов на основе голосований для внутренних проектов.</li>
 								<li>Реакция на вторжения, а также устранение последствий и причин проникновения. Разработка системы эвристическго анализа файловой структуры проектов на предмет появления вредоносного кода. Частичный аудит проектов на предмет безопасности.</li>
 							</ul>
-						</li>
-					</ul>
-					
-					<ul>
-						<li><span>Период:</span> сентябрь 2009 — апрель 2010</li>
-						<li><span>Место работы:</span> Рекламное агенство "FanMedia"</li>
-						<li><span>Должность:</span> Web-программист</li>
-						<li><span>Обязанности:</span>
-							<ul class="simpleList">
+						</article>
+						
+						<article>
+							<h3>Рекламное агенство "FanMedia"</h3>
+							<h4>Web-программист <span class="pull-right dates label label-inverse">сентябрь 2009 — апрель 2010</span></h4>
+
+							<ul class="circle">
 								<li>Поддержка погодного портала <a href="http://www.meteoprog.ua/ru/" rel="nofollow">Метеопрог</a> и его локализаций</li>
 								<li>разработка новых разделов на сайте.</li>
 							</ul>
-						</li>
-					</ul>
-					
-					<ul>
-						<li><span>Период:</span> 2006 — сентябрь 2009</li>
-						<li><span>Место работы:</span> фриланс</li>
-						<li><span>Должность:</span> PHP-программист</li>
-					</ul>
-					
-					<hr />
-				</div>
-				
-				<div class="main">
-					<h3>Дополнительно</h3>
-					<ul class="simpleList">
-						<li>Быстрая обучаемость и желание повышать профессионализм в области серверных web-технологий</li>
-						<li>Был майнтейнером двух open-source проектов</li>
-						<li>Примеры кода:
-							<ul>
-								<li><a href="https://gist.github.com/872592">https://gist.github.com/872592</a></li>
-								<li><a href="https://gist.github.com/872595">https://gist.github.com/872595</a></li>
-								<li><a href="https://gist.github.com/872597">https://gist.github.com/872597</a></li>
-							</ul>
-						</li>
-						<li>Блог: <a href="http://lond.habr.ru/" rel="me">http://lond.habrahabr.ru/</a></li>
-						<li>Постоянно проживаю в <a href="http://maps.google.com.ua/maps?q=50.412893,30.646019&amp;z=12" class="address">Киеве, Украина, район ст. м. "Харьковская"</a></li>
-						<li>Курю, алкогольных напитков не употребляю</li>
-						<li>Владею украинским, русским и английским языками</li>
-					</ul>
-					
-					<hr />
-				</div>
-				
-				<div class="main">
-					<h3>Контактная информация</h3>
-					<ul>
-						<li>Телефон: <a class="phone" href="tel:+380989416248">+380 (98) 941-62-48</a></li>
-						<li>E-mail: <img src="http://services.nexodyne.com/email/icon/UNiuEqG0s5031sfsA8sZuw%3D%3D/FITLhf4%3D/R01haWw%3D/0/image.png" alt="email" /></li>
-					</ul>
+						</article>
+						
+						<article>
+							<h3>фриланс</h3>
+							<h4>PHP-программист <span class="pull-right dates label label-inverse">2006 — сентябрь 2009</span></h4>
+						</article>
+					</section>
 				</div>
 			</div>
 		</div>
 		
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-25173582-1']);
+			_gaq.push(['_setAccount', 'UA-32170510-1']);
 			_gaq.push(['_trackPageview']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
