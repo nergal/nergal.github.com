@@ -25,6 +25,7 @@ span.dates{font-weight:normal;letter-spacing:-1px;font-size:0.8em;border-radius:
 .icon.linkedin{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-64.png)no-repeat}
 .icon.blog{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/rss_circle_black-64.png) no-repeat}
 .icon.skype{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/skype_circle_black-64.png) no-repeat}
+.icon.facebook{background:url(http://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_black-64.png) no-repeat}
 
 @media (max-width: 767px) {
     .iconset{position:static;width:280px}
