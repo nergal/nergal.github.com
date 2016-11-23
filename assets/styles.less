@@ -1,0 +1,50 @@
+@import '~bootstrap/less/bootstrap';
+
+@text-color: #333;
+
+@link-color: @text-color;
+@iconset-size: 68px;
+
+.bgimage(@src) {
+    background: transparent url("../assets/images/@{src}.svg") no-repeat 50% 50%;
+}
+
+.container {
+    padding-top: 4em;
+}
+
+article {
+    padding: @padding-large-vertical 0;
+
+    a {
+        border-bottom: 1px dotted @link-color;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom-style: solid;
+        }
+    }
+
+    .vendor {
+        padding-left: @caret-width-base;
+    }
+}
+
+.vcard h1 {
+    font-family: @font-family-serif;
+    font-variant: small-caps;
+    margin: 0;
+}
+
+.icon {
+    .text-hide();
+
+    .size(@iconset-size, @iconset-size);
+    display: inline-block;
+
+    &.github   { .bgimage('git') }
+    &.linkedin { .bgimage('linkedin') }
+    &.blog     { .bgimage('rss') }
+    &.skype    { .bgimage('skype') }
+    &.facebook { .bgimage('facebook') }
+}
