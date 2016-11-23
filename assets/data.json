@@ -86,6 +86,20 @@
                         "Creating release process for team’s internal needs (Jenkins, Grunt, Docker, nginx)"
                     ]
                 }, {
+                    "company": "FanMedia",
+                    "companyType": "Advertising agency",
+                    "companyUrl": null,
+                    "vendor": null,
+                    "vendorUrl": null,
+                    "location": ["Kyiv, Ukraine"],
+                    "startDate": "2009-09-01",
+                    "endDate": "2010-04-01",
+                    "title": "Web Developer",
+                    "responsibilities": [
+                        "Support weather portal Meteoprog and its localized versions (36 languages) (CodeIgniter / PHP)",
+                        "Developed new sections on the site (PHP, Javascript)"
+                    ]
+                }, {
                     "company": "Recreativ",
                     "companyType": "Advertising network",
                     "companyUrl": "https://www.recreativ.ua/",
@@ -149,20 +163,6 @@
                         "Developed various projects for Christmas, Easter, Love Day specials and universal CMS for performing contests w/ polling and uploading user’s data (including algorithms to prevent fake votes and cheating) (Zend / PHP, jQuery, MySQL)",
                         "Designed interaction w/ WRF (The Weather and Forecast) model to grab weather forecasts for Meteoprog.ua (Kohana / PHP, MySQL)",
                         "Reaction on illegal invasions and elimination consequences and causes of a penetration. Develop software for system heuristic analysis structure of a project to find out malware injections. Partially security audit for third-party code (Python, SQLite, nginx)"
-                    ]
-                }, {
-                    "company": "FanMedia",
-                    "companyType": "Advertising agency",
-                    "companyUrl": null,
-                    "vendor": null,
-                    "vendorUrl": null,
-                    "location": ["Kyiv, Ukraine"],
-                    "startDate": "2009-09-01",
-                    "endDate": "2010-04-01",
-                    "title": "Web Developer",
-                    "responsibilities": [
-                        "Support weather portal Meteoprog and its localized versions (36 languages) (CodeIgniter / PHP)",
-                        "Developed new sections on the site (PHP, Javascript)"
                     ]
                 }, {
                     "company": null,

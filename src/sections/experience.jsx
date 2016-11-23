@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+import _ from 'lodash';
 import React from 'react';
 import reactStringReplace from 'react-string-replace';
 
@@ -92,7 +93,7 @@ function RenderExperienceItem (props) {
         for (let item in listItems) {
             let value = listItems[item];
             str = reactStringReplace(str, item, (match) => (
-                <abbr title="asdasd">{match}</abbr>
+                <mark data-toggle="tooltip" title={value}>{match}</mark>
             ));
         }
 
@@ -116,9 +117,10 @@ function RenderExperienceItem (props) {
 }
 
 export default function RenderExperience (props) {
-    const responsibilities = props.data.content
-        .sort((item) => (new Date(item.startDate)).getTime())
-        .reverse();
+    const responsibilities = _.sortBy(
+        props.data.content,
+        (item) => (new Date(item.startDate).getTime())
+    ).reverse();
 
     return (
         <section>

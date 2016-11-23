@@ -1,10 +1,9 @@
 /*jshint esversion: 6 */
 import React from 'react';
+import _ from 'lodash';
 
 export default function RenderOverview (props) {
-    const items = props.data.content
-        .sort((item) => item.order)
-        .reverse();
+    const items = _.sortBy(props.data.content, 'order');
 
     return (
         <section>

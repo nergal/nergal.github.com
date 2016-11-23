@@ -6,9 +6,7 @@ export default function renderGeneral (props) {
     return (
         <div className="vcard">
             <h1 className="n fn">
-                <span className="given-name">{data.content.name}</span>
-                <br />
-                <span className="family-name">{data.content.lastName}</span>
+                <span className="given-name">{data.content.name}</span> <span className="family-name">{data.content.lastName}</span>
             </h1>
         </div>
     );

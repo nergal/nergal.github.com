@@ -4,9 +4,11 @@ import React from 'react';
 export default function renderSidebar (props) {
     const data = props.data;
     return (
-        <div className="iconset">
+        <div className="row">
             {(data.content.links || []).map((link, index) =>
-                <a key={index} className={`icon ${link.cssClass}`} href={link.linkUrl} alt={link.link}>{link.title}</a>
+                <div className="col-xs-4" key={index}>
+                    <a className={`icon ${link.cssClass}`} href={link.linkUrl} alt={link.link}>{link.title}</a>
+                </div>
             )}
         </div>
     );
