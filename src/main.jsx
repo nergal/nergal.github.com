@@ -44,10 +44,10 @@ class CVTemplate extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 text-center">
                         <SectionFactory dataset={sections} scheme="general" />
                     </div>
-                    <div className="col-md-6 col-md-offset-3">
+                    <div className="col-md-6 col-md-offset-3 col-xs-offset-2">
                         <SectionFactory dataset={sections} scheme="overview" />
                     </div>
                 </div>

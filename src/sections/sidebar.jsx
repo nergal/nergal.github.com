@@ -6,7 +6,7 @@ export default function renderSidebar (props) {
     return (
         <div className="row">
             {(data.content.links || []).map((link, index) =>
-                <div className="col-xs-4" key={index}>
+                <div className="col-xs-4 text-center" key={index}>
                     <a className={`icon ${link.cssClass}`} href={link.linkUrl} alt={link.link}>{link.title}</a>
                 </div>
             )}
