@@ -1,4 +1,46 @@
 {
+    "meta": {
+        "definitions": {
+            "CodeIgniter": "An open-source software rapid development web framework, for use in building dynamic web sites with PHP",
+            "Yii2": "An open source, object-oriented, component-based MVC PHP web application framework",
+            "Yii": "An open source, object-oriented, component-based MVC PHP web application framework",
+            "Kohana": "A PHP5 HMVC framework",
+            "Zend": "An open source, object-oriented web application framework implemented in PHP 5",
+
+            "Dropwizard": "A Java framework for developing ops-friendly, high-performance, RESTful web services",
+            "Android SDK": "The Android software development kit",
+            "Spring": "An application framework and inversion of control container for the Java platform",
+
+            "jQuery": "A cross-platform JavaScript library designed to simplify the client-side scripting of HTML",
+            "LMD": "Lazy Module Declaration specifies a mechanism for defining modules such that the module and its dependencies can be lazy loaded",
+            "AngularJS": "A complete JavaScript-based open-source front-end web application framework used to address many of the challenges encountered in developing single-page applications",
+            "Grunt": "A JavaScript Task Runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting, etc",
+            "Backbone": "A JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm",
+
+            "Django": "A free and open-source web framework, written in Python, which follows the model-view-template (MVT) architectural pattern",
+
+            "Jenkins": "An open source automation server written in Java",
+            "Docker": "An open-source project that automates the deployment of Linux applications inside software containers",
+            "nginx": "Software to provide a web server",
+
+            "Redmine": "A free and open source, web-based project management and issue tracking tool",
+            "Phing": "A PHP project build system or build tool based on ​Apache Ant",
+            "Gitosis": "A tool which provides access control and remote management for hosted Git repositories",
+
+            "PostgreSQL": "An object-relational database (ORDBMS)",
+            "SQLite": "A relational database management system (RDBMS) contained in a C programming library",
+            "MSSQL": "A relational database management system (RDBMS) developed by Microsoft",
+            "MySQL": "An open-source relational database management system (RDBMS)",
+
+            ".NET": "A software framework developed by Microsoft that runs primarily on Microsoft Windows",
+            "JavaScript": "A high-level, dynamic, untyped, and interpreted programming language",
+            "NodeJS": "An open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications",
+            "Python": "A widely used high-level, general-purpose, interpreted, dynamic programming language",
+            "PHP": "A server-side scripting language designed primarily for web development but also used as a general-purpose programming language",
+            "Java": "A general-purpose computer programming language that is concurrent, class-based, object-oriented and specifically designed to have as few implementation dependencies as possible"
+        },
+        "monthes": ["Jan", "Feb", "Apr", "Mar", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
     "data": [
         {
             "header": null,

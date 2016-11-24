@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import React from 'react';
+import React, {Component} from 'react';
 import _ from 'lodash';
 
 export default function RenderOverview (props) {
@@ -8,9 +8,9 @@ export default function RenderOverview (props) {
     return (
         <section>
             <dl className="dl-horizontal">
-                {items.map(item =>
+                {items.map((item, index) =>
                     [
-                        <dt>{item.title}</dt>,
+                        <dt key={index}>{item.title}</dt>,
                         <dd>{item.value.join(', ')}</dd>
                     ]
                 )}

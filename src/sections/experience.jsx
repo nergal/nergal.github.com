@@ -1,7 +1,12 @@
 /*jshint esversion: 6 */
 import _ from 'lodash';
-import React from 'react';
+import React, {Component} from 'react';
+
 import reactStringReplace from 'react-string-replace';
+
+import Popover from 'react-bootstrap/lib/Popover';
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
+import Badge from 'react-bootstrap/lib/Badge';
 
 function VendorBadge (props) {
     if ( ! props.name) {
@@ -19,102 +24,84 @@ function VendorBadge (props) {
 
 function CompanyBadge (props) {
     const item = props.data;
-    const companyString = [
-        <span className="text-capitalize">{item.companyType}</span>,
-        item.company && ` "${item.company}"`
-    ];
+    const companyString = (
+        <span>
+            <span className="text-capitalize">{item.companyType}</span> {item.company && ` "${item.company}"`}
+        </span>
+    );
 
     return (
         <h3>
-            {item.companyUrl ? <a target="_blank" href={item.companyUrl}>{companyString}</a> : companyString}
+            {item.companyUrl
+                ? <a target="_blank" href={item.companyUrl}>{companyString}</a>
+                : companyString}
             <VendorBadge name={item.vendor} url={item.vendorUrl} />
             <small className="text-capitalize"> {item.title}</small>
         </h3>
     );
 }
 
-function RenderExperienceItem (props) {
-    const item = props.item;
+class RenderExperienceItem extends React.Component {
+    formatDate(monthes) {
+        return function (strDate) {
+            if (strDate === null) {
+                return 'present';
+            }
 
-    const dateString = [item.startDate, item.endDate].map(function(strDate) {
-        if (strDate === null) {
-            return 'present';
+            const date = new Date(strDate);
+
+            return [
+                monthes[date.getMonth()],
+                date.getFullYear()
+            ].join(' ');
         }
+    }
 
-        const date = new Date(strDate);
-        const monthes = [
-            'Jan', 'Feb', 'Apr', 'Mar', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-        ];
-
-        return [monthes[date.getMonth()], date.getFullYear()].join(' ');
-    }).join(' - ');
-
-    const rowProcessing = function (str) {
-        const listItems = {
-            'CodeIgniter': '',
-            'Yii2': '',
-            'Yii': '',
-            'Kohana': '',
-            'Zend': '',
-
-            'Dropwizard': '',
-            'Android SDK': '',
-            'Spring': '',
-
-            'jQuery': '',
-            'LMD': '',
-            'AngularJS': '',
-            'Grunt': '',
-            'Backbone': '',
-
-            'Django': '',
-
-            'Jenkins': '',
-            'Docker': '',
-            'nginx': '',
-
-            'Redmine': '',
-            'Phing': '',
-            'Gitosis': '',
-
-            'PostgreSQL': '',
-            'SQLite': '',
-            'MSSQL': '',
-            'MySQL': '',
-
-            'Javascript': '',
-            'NodeJS': '',
-            'Python': '',
-            'PHP': '',
-            'Java': ''
-        };
+    rowProcessing(str) {
+        const listItems = this.context.metadata.definitions;
 
         for (let item in listItems) {
             let value = listItems[item];
-            str = reactStringReplace(str, item, (match) => (
-                <mark data-toggle="tooltip" title={value}>{match}</mark>
+            const overlay = <Popover title={item} id={`tooltip-${item}`}>{value}</Popover>;
+
+            str = reactStringReplace(str, item, (match, index) => (
+                <OverlayTrigger placement="top" overlay={overlay} key={`${item}-${index}`}>
+                    <mark>{match}</mark>
+                </OverlayTrigger>
             ));
         }
 
         return str;
-    };
+    }
 
-    return (
-        <article>
-            <CompanyBadge data={item} />
-            <span className="pull-right label label-default">{dateString}</span>
+    render() {
+        const item = this.props.item;
+        const monthes = this.context.metadata.monthes;
+        const dateString = [
+            item.startDate,
+            item.endDate
+        ].map(this.formatDate(monthes)).join(' - ');
 
-            <h4>{item.location.length > 0 && item.location.join(' / ')}</h4>
+        return (
+            <article>
+                <CompanyBadge data={item} />
+                <Badge pullRight={true}>{dateString}</Badge>
 
-            <ul>
-                {item.responsibilities.map((row, index) =>
-                    <li key={index}>{rowProcessing(row)}</li>
-                )}
-            </ul>
-        </article>
-    );
+                <h4>{item.location.length > 0 && item.location.join(' / ')}</h4>
+
+                <ul>
+                    {item.responsibilities.map((row, index) =>
+                        <li key={index}>{this.rowProcessing(row)}</li>
+                    )}
+                </ul>
+            </article>
+        );
+    }
 }
+
+RenderExperienceItem.contextTypes = {
+    metadata: React.PropTypes.object
+};
 
 export default function RenderExperience (props) {
     const responsibilities = _.sortBy(
@@ -124,8 +111,8 @@ export default function RenderExperience (props) {
 
     return (
         <section>
-            {responsibilities.map(item =>
-                <RenderExperienceItem key={item.startDate} item={item} />
+            {responsibilities.map((item, index) =>
+                <RenderExperienceItem key={index} item={item} />
             )}
         </section>
     );

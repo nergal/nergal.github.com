@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import React from 'react';
+import React, {Component} from 'react';
 
 export default function renderGeneral (props) {
     const data = props.data;

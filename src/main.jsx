@@ -4,9 +4,13 @@ import '../assets/styles.less';
 
 import dataSet from '../assets/data.json';
 
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 
 import SectionFactory from './sections.jsx';
 
@@ -14,23 +18,34 @@ class CVTemplate extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            sections: []
+            dataset: [],
+            metadata: {}
         };
     }
 
-    componentWillMount() {
-        if (dataSet) {
-            this.setState({
-                sections: dataSet.data
-            });
+    getChildContext() {
+        return {
+            metadata: this.state.metadata,
+            dataset: this.state.dataset
+        };
+    }
+
+    processData(data) {
+        this.setState({
+            dataset: data.data,
+            metadata: data.meta
+        });
+    }
+
+    componentDidMount() {
+        if (!dataSet) {
+            this.processData(dataSet);
         } else {
             axios.get(this.props.dataSource)
                 .then(res => {
                     try {
                         const sections = res.data;
-                        this.setState({
-                            sections: sections.data
-                        });
+                        this.processData(sections);
                     } catch (e) {
                         console.error(e);
                     }
@@ -39,32 +54,35 @@ class CVTemplate extends React.Component {
     }
 
     render() {
-        const sections = this.state.sections;
-
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3 text-center">
-                        <SectionFactory dataset={sections} scheme="general" />
-                    </div>
-                    <div className="col-md-6 col-md-offset-3 col-xs-offset-2">
-                        <SectionFactory dataset={sections} scheme="overview" />
-                    </div>
-                </div>
+            <Grid>
+                <Row>
+                    <Col md={3} className="text-center">
+                        <SectionFactory scheme="general" />
+                    </Col>
+                    <Col md={8} lg={6} mdOffset={1} lgOffset={3} smOffset={2}>
+                        <SectionFactory scheme="overview" />
+                    </Col>
+                </Row>
                 <hr/>
-                <div className="row">
-                    <div className="col-md-3">
-                        <SectionFactory dataset={sections} scheme="sidebar" />
-                    </div>
-                    <div className="col-md-9">
-                        <SectionFactory dataset={sections} scheme="experience" /><hr />
-                        <SectionFactory dataset={sections} scheme="additionally" />
-                    </div>
-                </div>
-            </div>
+                <Row>
+                    <Col md={3}>
+                        <SectionFactory scheme="sidebar" />
+                    </Col>
+                    <Col md={9}>
+                        <SectionFactory scheme="experience" /><hr />
+                        <SectionFactory scheme="additionally" />
+                    </Col>
+                </Row>
+            </Grid>
         );
     }
 }
+
+CVTemplate.childContextTypes = {
+    metadata: React.PropTypes.object,
+    dataset: React.PropTypes.array
+};
 
 ReactDOM.render(
     <CVTemplate dataSource="/assets/data.json"/>,
