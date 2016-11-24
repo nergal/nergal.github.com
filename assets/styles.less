@@ -3,10 +3,13 @@
 @text-color: #333;
 
 @link-color: @text-color;
-@iconset-size: 68px;
+@icon-min-size: 18px;
+@icon-max-size: 68px;
 
 .bgimage(@src) {
+    .opacity(.85);
     background: transparent url("../assets/images/@{src}.svg") no-repeat 50% 50%;
+    background-size: contain;
 }
 
 .container {
@@ -36,10 +39,23 @@ article {
     margin: 0;
 }
 
+.iconset {
+    margin: 15px;
+
+    >div {
+        height: 100%;
+        padding: 0;
+    }
+}
+
 .icon {
     .text-hide();
 
-    .size(@iconset-size, @iconset-size);
+    .size(100%, 100%);
+    max-width: @icon-max-size;
+    max-height: @icon-max-size;
+    min-width: @icon-min-size;
+    min-height: @icon-min-size;
     display: inline-block;
 
     &.github   { .bgimage('git') }

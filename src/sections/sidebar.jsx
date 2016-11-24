@@ -10,7 +10,7 @@ export default function renderSidebar (props) {
     const colWidth = Math.floor(12 / links.length);
 
     return (
-        <Row>
+        <Row style={{height: (colWidth * 18) + 'px'}} className="iconset">
             {links.map((link, index) =>
                 <Col xs={colWidth} className="text-center" key={index}>
                     <a className={`icon ${link.cssClass}`} href={link.linkUrl} alt={link.link}>{link.title}</a>
