@@ -6,6 +6,7 @@ import dataSet from '../assets/data.json';
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import axios from 'axios';
 
 import Grid from 'react-bootstrap/lib/Grid';
@@ -13,6 +14,8 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
 import SectionFactory from './sections.jsx';
+
+ReactGA.initialize('UA-32170510-1');
 
 class CVTemplate extends React.Component {
     constructor(props) {
@@ -51,6 +54,8 @@ class CVTemplate extends React.Component {
                     }
                 });
         }
+
+        ReactGA.pageview(window.location.pathname);
     }
 
     render() {
