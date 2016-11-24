@@ -41,7 +41,7 @@ class CVTemplate extends React.Component {
     }
 
     componentDidMount() {
-        if (!dataSet) {
+        if (dataSet) {
             this.processData(dataSet);
         } else {
             axios.get(this.props.dataSource)
