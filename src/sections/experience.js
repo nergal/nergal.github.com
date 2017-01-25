@@ -1,24 +1,11 @@
-/*jshint esversion: 6 */
 import _ from 'lodash';
 import React, {Component} from 'react';
-
 import reactStringReplace from 'react-string-replace';
-
-import Popover from 'react-bootstrap/lib/Popover';
-import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import Badge from 'react-bootstrap/lib/Badge';
+import {Popover, OverlayTrigger, Badge} from 'react-bootstrap';
 
 function VendorBadge (props) {
-    if ( ! props.name) {
-        return null;
-    }
-
-    if (props.url) {
-        return (
-            <span className="vendor">(at <a target="_blank" href={props.url}>{props.name}</a>)</span>
-        );
-    }
-
+    if ( ! props.name) return null;
+    if (props.url) return (<span className="vendor">(at <a target="_blank" href={props.url}>{props.name}</a>)</span>);
     return <span className="vendor">(at {props.name})</span>;
 }
 
@@ -54,7 +41,7 @@ class RenderExperienceItem extends React.Component {
                 monthes[date.getMonth()],
                 date.getFullYear()
             ].join(' ');
-        }
+        };
     }
 
     rowProcessing(str) {

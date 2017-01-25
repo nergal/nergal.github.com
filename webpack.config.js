@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.jsx',
+    entry: './src/main.js',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'app.bundle.js'
@@ -10,8 +10,8 @@ module.exports = {
     module: {
         preLoaders: [{
             test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'jshint-loader'
+            exclude: /(node_modules|\~)/,
+            loader: 'eslint-loader'
         }],
         loaders: [
             {
@@ -35,12 +35,15 @@ module.exports = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            mangle: {
+                screw_ie8: true,
+                keep_fnames: true
+            },
             compress: {
-                warnings: false,
+                screw_ie8: true
             },
-            output: {
-                comments: false,
-            },
+            comments: false
         })
     ]
 };

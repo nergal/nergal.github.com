@@ -1,28 +1,30 @@
-/*jshint esversion: 6 */
-
 import '../assets/styles.less';
 
-import dataSet from '../assets/data.json';
-
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
-import axios from 'axios';
 
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+import {Grid, Row, Col} from 'react-bootstrap';
 
-import SectionFactory from './sections.jsx';
+import dataSet from '../assets/data.json';
+import SectionFactory from './sectionFactory';
 
 ReactGA.initialize('UA-32170510-1');
 
-class CVTemplate extends React.Component {
+class CVTemplate extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             dataset: [],
             metadata: {}
+        };
+    }
+
+    static get childContextTypes() {
+        return {
+            metadata: PropTypes.object,
+            dataset: PropTypes.array
         };
     }
 
@@ -33,27 +35,11 @@ class CVTemplate extends React.Component {
         };
     }
 
-    processData(data) {
-        this.setState({
-            dataset: data.data,
-            metadata: data.meta
-        });
-    }
-
     componentDidMount() {
-        if (dataSet) {
-            this.processData(dataSet);
-        } else {
-            axios.get(this.props.dataSource)
-                .then(res => {
-                    try {
-                        const sections = res.data;
-                        this.processData(sections);
-                    } catch (e) {
-                        console.error(e);
-                    }
-                });
-        }
+        this.setState({
+            dataset: dataSet.data,
+            metadata: dataSet.meta
+        });
 
         ReactGA.pageview(window.location.pathname);
     }
@@ -75,7 +61,8 @@ class CVTemplate extends React.Component {
                         <SectionFactory scheme="sidebar" />
                     </Col>
                     <Col md={9}>
-                        <SectionFactory scheme="experience" /><hr />
+                        <SectionFactory scheme="experience" />
+                        <hr />
                         <SectionFactory scheme="additionally" />
                     </Col>
                 </Row>
@@ -84,12 +71,7 @@ class CVTemplate extends React.Component {
     }
 }
 
-CVTemplate.childContextTypes = {
-    metadata: React.PropTypes.object,
-    dataset: React.PropTypes.array
-};
-
 ReactDOM.render(
-    <CVTemplate dataSource="/assets/data.json"/>,
+    <CVTemplate />,
     document.getElementById('output')
 );

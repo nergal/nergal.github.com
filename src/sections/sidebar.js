@@ -1,8 +1,5 @@
-/*jshint esversion: 6 */
-import React, {Component} from 'react';
-
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+import React from 'react';
+import {Row, Col} from 'react-bootstrap';
 
 export default function renderSidebar (props) {
     const data = props.data;

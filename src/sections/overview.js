@@ -1,5 +1,4 @@
-/*jshint esversion: 6 */
-import React, {Component} from 'react';
+import React from 'react';
 import _ from 'lodash';
 
 export default function RenderOverview (props) {
