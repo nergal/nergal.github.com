@@ -4,28 +4,25 @@ var webpack = require('webpack');
 module.exports = {
     entry: './src/main.js',
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.js'
     },
     module: {
-        preLoaders: [{
-            test: /\.js$/,
-            exclude: /(node_modules|\~)/,
-            loader: 'eslint-loader'
-        }],
-        loaders: [
+        rules: [
             {
                 test: /.jsx?$/,
-                loader: 'babel-loader',
                 exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                use: ['eslint-loader', {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env', 'react']
+                    },
+                }],
             },
             { test: /\.json$/, loader: 'json-loader' },
             { test: /\.(le|c)ss$/, loader: 'style-loader!css-loader!less-loader' },
             { test: /\.svg$/, loader: 'url-loader' },
-            { test: /\.(woff2?|ttf|eot|png)$/, loader: 'file-loader!url?limit=10000' }
+            { test: /\.(woff2?|ttf|eot|png)$/, loader: 'file-loader!url-loader?limit=10000' }
         ]
     },
     plugins: [

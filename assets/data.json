@@ -13,6 +13,7 @@
 
             "jQuery": "A cross-platform JavaScript library designed to simplify the client-side scripting of HTML",
             "LMD": "Lazy Module Declaration specifies a mechanism for defining modules such that the module and its dependencies can be lazy loaded",
+            "Angular 2+": "A TypeScript-based open-source front-end web application platform to address all of the parts of the developer's workflow while building complex web applications",
             "AngularJS": "A complete JavaScript-based open-source front-end web application framework used to address many of the challenges encountered in developing single-page applications",
             "Grunt": "A JavaScript Task Runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting, etc",
             "Backbone": "A JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm",
@@ -20,8 +21,15 @@
             "Django": "A free and open-source web framework, written in Python, which follows the model-view-template (MVT) architectural pattern",
 
             "Jenkins": "An open source automation server written in Java",
-            "Docker": "An open-source project that automates the deployment of Linux applications inside software containers",
+            "Docker": "An open source project that automates the deployment of Linux applications inside software containers",
             "nginx": "Software to provide a web server",
+            "AWS Lambda": "Serverless compute service that runs your code in response to events and automatically manages the underlying compute resources for you",
+            "Gitlab": "A web-based Git repository manager with wiki and issue tracking features",
+            "Artifactory": "An universal Artifact Repository Manager",
+            "Terraform": "Allows users to define a datacenter infrastructure in a high-level configuration language, from which it can create an execution plan to build the infrastructure in a service provider such as AWS",
+            "pm2": "Production process manager for Node.js applications with a built-in load balancer",
+            "forever": "Simple CLI tool for ensuring that a given script runs continuously",
+            "RPM": "Package management system widely used in Linux distributions",
 
             "Redmine": "A free and open source, web-based project management and issue tracking tool",
             "Phing": "A PHP project build system or build tool based on ​Apache Ant",
@@ -37,7 +45,8 @@
             "NodeJS": "An open-source, cross-platform JavaScript runtime environment for developing a diverse variety of tools and applications",
             "Python": "A widely used high-level, general-purpose, interpreted, dynamic programming language",
             "PHP": "A server-side scripting language designed primarily for web development but also used as a general-purpose programming language",
-            "Java": "A general-purpose computer programming language that is concurrent, class-based, object-oriented and specifically designed to have as few implementation dependencies as possible"
+            "Java": "A general-purpose computer programming language that is concurrent, class-based, object-oriented and specifically designed to have as few implementation dependencies as possible",
+            "Gradle": "Build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language"
         },
         "monthes": ["Jan", "Feb", "Apr", "Mar", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     },
@@ -96,15 +105,15 @@
                 {
                     "order": 10,
                     "title": "Languages",
-                    "value": ["PHP", "Javascript", "Java", "Python", "Shell"]
+                    "value": ["Javascript", "PHP", "Java", "Python", "Shell"]
                 }, {
                     "order": 20,
                     "title": "Frameworks",
-                    "value": ["Yii2", "Kohana", "Zend", "AngularJS", "Dropwizard", "Django"]
+                    "value": ["Angular 2+", "Yii2", "Dropwizard", "Django", "NodeJS"]
                 }, {
                     "order": 30,
                     "title": "Servers",
-                    "value": ["PHP-FPM", "MySQL", "nginx", "NodeJS", "memcached"]
+                    "value": ["pm2", "forever", "PHP-FPM", "MySQL", "nginx"]
                 }, {
                     "order": 40,
                     "title": "Misc. keywords",
@@ -116,6 +125,22 @@
             "template": "experience",
             "content": [
                 {
+                    "company": "Halliburton",
+                    "companyType": "Oil field service company ",
+                    "companyUrl": "http://www.halliburton.com/en-US/default.page",
+                    "vendor": "Luxoft",
+                    "vendorUrl": "https://www.luxoft.com/",
+                    "location": ["Kyiv, Ukraine", "Houston, TX"],
+                    "startDate": "2017-02-14",
+                    "endDate": "2017-10-12",
+                    "title": "Lead Web Developer",
+                    "responsibilities": [
+                        "Creating a collaborative development system from scratch (Angular 2+ / NodeJS)",
+                        "Integrating frontend code with various solutions like AWS Lambda, Jenkins, Gitlab API, Terraform scripts through middle tier microservices",
+                        "Creating release process for team’s internal needs (Jenkins, Gradle, RPM, Artifactory)"
+                    ]
+                },
+                {
                     "company": "Hotwire.com",
                     "companyType": "Travel website ",
                     "companyUrl": "https://www.hotwire.com/",
@@ -123,7 +148,7 @@
                     "vendorUrl": "https://www.luxoft.com/",
                     "location": ["Kyiv, Ukraine", "San Francisco, CA"],
                     "startDate": "2015-09-01",
-                    "endDate": null,
+                    "endDate": "2017-02-14",
                     "title": "Senior Web Developer",
                     "responsibilities": [
                         "Supporting existing landing page engine (PHP)",

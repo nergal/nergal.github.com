@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import reactStringReplace from 'react-string-replace';
 import {Popover, OverlayTrigger, Badge} from 'react-bootstrap';
 
@@ -87,7 +88,7 @@ class RenderExperienceItem extends React.Component {
 }
 
 RenderExperienceItem.contextTypes = {
-    metadata: React.PropTypes.object
+    metadata: PropTypes.object
 };
 
 export default function RenderExperience (props) {
