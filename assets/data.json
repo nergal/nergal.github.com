@@ -13,10 +13,12 @@
 
             "jQuery": "A cross-platform JavaScript library designed to simplify the client-side scripting of HTML",
             "LMD": "Lazy Module Declaration specifies a mechanism for defining modules such that the module and its dependencies can be lazy loaded",
-            "Angular 2+": "A TypeScript-based open-source front-end web application platform to address all of the parts of the developer's workflow while building complex web applications",
+            "Angular": "A TypeScript-based open-source front-end web application platform to address all of the parts of the developer's workflow while building complex web applications",
             "AngularJS": "A complete JavaScript-based open-source front-end web application framework used to address many of the challenges encountered in developing single-page applications",
             "Grunt": "A JavaScript Task Runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting, etc",
             "Backbone": "A JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm",
+            "RxJS": "A library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code",
+            "@ngrx/store": "RxJS powered state management for Angular applications, inspired by Redux",
 
             "Django": "A free and open-source web framework, written in Python, which follows the model-view-template (MVT) architectural pattern",
 
@@ -46,7 +48,9 @@
             "Python": "A widely used high-level, general-purpose, interpreted, dynamic programming language",
             "PHP": "A server-side scripting language designed primarily for web development but also used as a general-purpose programming language",
             "Java": "A general-purpose computer programming language that is concurrent, class-based, object-oriented and specifically designed to have as few implementation dependencies as possible",
-            "Gradle": "Build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language"
+            "Gradle": "Build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language",
+
+            "Flux architecture": "An architecture for creating data layers in JavaScript applications based on CQRS"
         },
         "monthes": ["Jan", "Feb", "Apr", "Mar", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     },
@@ -105,11 +109,11 @@
                 {
                     "order": 10,
                     "title": "Languages",
-                    "value": ["Javascript", "PHP", "Java", "Python", "Shell"]
+                    "value": ["Javascript", "Java", "Python", "PHP", "Shell"]
                 }, {
                     "order": 20,
                     "title": "Frameworks",
-                    "value": ["Angular 2+", "Yii2", "Dropwizard", "Django", "NodeJS"]
+                    "value": ["Angular", "NodeJS", "Dropwizard", "Yii2", "Django"]
                 }, {
                     "order": 30,
                     "title": "Servers",
@@ -125,6 +129,23 @@
             "template": "experience",
             "content": [
                 {
+                    "company": "Markit",
+                    "companyType": "Financial information and services company ",
+                    "companyUrl": "https://ihsmarkit.com/index.html",
+                    "vendor": "Luxoft",
+                    "vendorUrl": "https://www.luxoft.com/",
+                    "location": ["Kyiv, Ukraine", "London, UK"],
+                    "startDate": "2017-11-01",
+                    "endDate": "2018-04-05",
+                    "title": "Lead Web Developer",
+                    "responsibilities": [
+                        "Creating system design from scratch using Angular and @ngrx/store",
+                        "Design interactions between complicated data hierarchy using Flux architecture",
+                        "Implementing data transformations using strict functional approach only (RxJS)",
+                        "Deep teamwork with backend team to develop good user experience"
+                    ]
+                },
+                {
                     "company": "Halliburton",
                     "companyType": "Oil field service company ",
                     "companyUrl": "http://www.halliburton.com/en-US/default.page",
@@ -132,10 +153,10 @@
                     "vendorUrl": "https://www.luxoft.com/",
                     "location": ["Kyiv, Ukraine", "Houston, TX"],
                     "startDate": "2017-02-14",
-                    "endDate": "2017-10-12",
+                    "endDate": "2017-10-30",
                     "title": "Lead Web Developer",
                     "responsibilities": [
-                        "Creating a collaborative development system from scratch (Angular 2+ / NodeJS)",
+                        "Creating a collaborative development system from scratch (Angular / NodeJS)",
                         "Integrating frontend code with various solutions like AWS Lambda, Jenkins, Gitlab API, Terraform scripts through middle tier microservices",
                         "Creating release process for team’s internal needs (Jenkins, Gradle, RPM, Artifactory)"
                     ]
