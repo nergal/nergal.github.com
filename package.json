@@ -41,7 +41,7 @@
     "json-loader": "0.5.7",
     "less": "2.7.2",
     "less-loader": "4.0.5",
-    "prop-types": "15.6.0",
+    "prop-types": "15.7.2",
     "react": "16.0.0",
     "react-bootstrap": "0.31.3",
     "react-dom": "16.0.0",
