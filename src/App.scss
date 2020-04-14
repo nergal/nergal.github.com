@@ -1,0 +1,68 @@
+$body-color: #333;
+$font-size-base: .9rem;
+$small-font-size: 65%;
+
+$link-color: $body-color;
+$icon-min-size: 18px;
+$icon-max-size: 68px;
+
+@import '~bootstrap/scss/bootstrap';
+
+@mixin bgimage($src) {
+    opacity: .85;
+    background: transparent url("./assets/images/#{$src}.svg") no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.container {
+    padding-top: 4em;
+}
+
+article {
+    padding: $list-inline-padding 0;
+
+    a {
+        border-bottom: 1px dotted $link-color;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom-style: solid;
+        }
+    }
+
+    .vendor {
+        padding-left: $caret-width;
+    }
+}
+
+.vcard h1 {
+    font-family: serif;
+    font-variant: small-caps;
+    margin: 0;
+}
+
+.iconset {
+    margin: 15px;
+
+    >div {
+        height: 100%;
+        padding: 0;
+    }
+}
+
+.icon {
+    @include text-hide();
+
+    @include size(100%, 100%);
+    max-width: $icon-max-size;
+    max-height: $icon-max-size;
+    min-width: $icon-min-size;
+    min-height: $icon-min-size;
+    display: inline-block;
+
+    &.github   { @include bgimage('git') }
+    &.linkedin { @include bgimage('linkedin') }
+    &.blog     { @include bgimage('rss') }
+    &.skype    { @include bgimage('skype') }
+    &.facebook { @include bgimage('facebook') }
+}
