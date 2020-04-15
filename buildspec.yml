@@ -12,13 +12,12 @@ phases:
   build:
     commands: npm run build
 
-#reports:
-#report-name-or-arn:
-#files:
-# - location
-#base-directory: location
-#discard-paths: yes
-#file-format: JunitXml | CucumberJson
+reports:
+  unit-tests:
+    files:
+      - tests/junit.xml
+    discard-paths: yes
+    file-format: JunitXml
 
 artifacts:
   files:
