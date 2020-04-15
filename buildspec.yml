@@ -8,24 +8,22 @@ phases:
   install:
     runtime-versions:
       nodejs: 12
-    commands:
-      npm install
+    commands: npm install
   build:
-    commands:
-      npm run build
+    commands: npm run build
 
 #reports:
-  #report-name-or-arn:
-    #files:
-      # - location
-    #base-directory: location
-    #discard-paths: yes
-    #file-format: JunitXml | CucumberJson
+#report-name-or-arn:
+#files:
+# - location
+#base-directory: location
+#discard-paths: yes
+#file-format: JunitXml | CucumberJson
 
 artifacts:
   files:
     - build/**/*
 
-#cache:
-  #paths:
-    # - paths
+cache:
+  paths:
+    - node_modules/**/*
