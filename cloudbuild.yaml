@@ -1,7 +1,7 @@
 # [START functions_ci_cd_cloud_build]
 steps:
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', \'-t', 'gcr.io/$PROJECT_ID/cv', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/cv', '.']
       timeout: 500s
     - name: 'gcr.io/cloud-builders/docker'
       args: ['push', 'gcr.io/$PROJECT_ID/cv']
