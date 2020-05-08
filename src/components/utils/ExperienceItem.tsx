@@ -18,7 +18,7 @@ const ExperienceItem: FC<Props> = ({ item }) => (
     <Badge pill variant="secondary" className="float-right">
       {[item.startDate, item.endDate]
         .map((x) => new Date(x))
-        .map((date) => dateTimeFormat.format(date))
+        .map((date) => (date.getTime() ? dateTimeFormat.format(date) : "now"))
         .join(" - ")}
     </Badge>
 
