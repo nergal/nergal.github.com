@@ -164,13 +164,15 @@
           "companyUrl": "https://www.olympic.org/the-ioc",
           "vendor": "Luxoft",
           "vendorUrl": "https://www.luxoft.com/",
-          "location": ["Kyiv, Ukraine", "London, UK"],
+          "location": ["Kyiv, Ukraine", "Madrid, ES"],
           "startDate": "2018-04-05",
           "endDate": "2019-09-02",
           "title": "Lead Web Developer",
           "responsibilities": [
-            "Create a project-level architectural decisions",
-            "Lead frontend team"
+            "Leading a frontend development team",
+            "Deep integration with backend API and data analytics teams",
+            "Participating in pre-sale activities for the client needs",
+            "Creating a design of the management panel for a data warehouse split into several web-applications for different business processes using React"
           ]
         },
         {
