@@ -1,35 +1,40 @@
-import React, { FC, ReactNode } from "react";
-// import { Popover, OverlayTrigger } from "react-bootstrap";
-// import reactStringReplace from "react-string-replace";
+import React, { FC, ReactNode, useContext } from "react";
+import DefinitionContext from "../DefinitionContext";
+import { Popover, OverlayTrigger } from "react-bootstrap";
+import reactStringReplace from "react-string-replace";
 
 type Props = {
   content: ReactNode;
 };
 
 const ExperienceRow: FC<Props> = ({ content }) => {
-//   const listItems: string[] = [];
-//   let str = content;
+  const definitions = useContext(DefinitionContext);
+  let results = content;
 
-//   for (let item in listItems) {
-//     let value = listItems[item];
-//     const overlay = (
-//       <Popover title={item} id={`tooltip-${item}`}>
-//         {value}
-//       </Popover>
-//     );
+  for (let definition in definitions) {
+    let explanation = definitions[definition];
+    const overlay = (
+      <Popover title={definition} id={`tooltip-${definition}`}>
+        {explanation}
+      </Popover>
+    );
 
-//     str = reactStringReplace(str, item, (match, index) => (
-//       <OverlayTrigger
-//         placement="top"
-//         overlay={overlay}
-//         key={`${item}-${index}`}
-//       >
-//         <mark>{match}</mark>
-//       </OverlayTrigger>
-//     ));
-//   }
+    results = reactStringReplace(
+      results as string,
+      definition,
+      (match: string, index: number) => (
+        <OverlayTrigger
+          placement="top"
+          overlay={overlay}
+          key={`${definition}-${index}`}
+        >
+          <mark>{match}</mark>
+        </OverlayTrigger>
+      )
+    );
+  }
 
-  return <>{content}</>;
+  return <>{results}</>;
 };
 
 export default ExperienceRow;

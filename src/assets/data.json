@@ -19,6 +19,9 @@
       "Backbone": "A JavaScript library with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm",
       "RxJS": "A library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code",
       "@ngrx/store": "RxJS powered state management for Angular applications, inspired by Redux",
+      "React": "A JavaScript library for building user interfaces",
+      "Redux-saga": "A library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, easy to test, and better at handling failures",
+      "Redux": "A predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.",
 
       "Django": "A free and open-source web framework, written in Python, which follows the model-view-template (MVT) architectural pattern",
 
@@ -172,7 +175,7 @@
             "Leading a frontend development team",
             "Deep integration with backend API and data analytics teams",
             "Participating in pre-sale activities for the client needs",
-            "Creating a design of the management panel for a data warehouse split into several web-applications for different business processes using React"
+            "Creating a design of the management panel for a data warehouse split into several web-applications for different business processes (React, redux, redux-saga)"
           ]
         },
         {

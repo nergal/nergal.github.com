@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactGA from "react-ga";
 import { Row, Col, Container } from "react-bootstrap";
 import DataContext from "./components/DataContext";
+import DefinitionContext from "./components/DefinitionContext";
 import DataProvider from "./components/DataProvider";
 import {
   General,
@@ -18,10 +19,17 @@ ReactGA.initialize("UA-32170510-1");
 
 function App() {
   const [dataset, setDataset] = useState<DataRecord<any>[]>([]);
+  const [definitions, setDefinitions] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    const { data } = dataSet;
+    const {
+      data,
+      meta: { definitions },
+    } = dataSet;
+
     setDataset(data);
+    setDefinitions(definitions);
+
     ReactGA.pageview(window.location.pathname);
   }, []);
 
@@ -58,11 +66,13 @@ function App() {
             </DataProvider>
           </Col>
           <Col md={9}>
-            <DataProvider template="experience">
-              {({ header, content }: DataProps<ExperienceContent[]>) => (
-                <Experience header={header} content={content} />
-              )}
-            </DataProvider>
+            <DefinitionContext.Provider value={definitions}>
+              <DataProvider template="experience">
+                {({ header, content }: DataProps<ExperienceContent[]>) => (
+                  <Experience header={header} content={content} />
+                )}
+              </DataProvider>
+            </DefinitionContext.Provider>
             <hr />
             <DataProvider template="additionally">
               {({ header, content }: DataProps<string[]>) => (
