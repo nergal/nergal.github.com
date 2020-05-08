@@ -14,8 +14,9 @@ const ExperienceRow: FC<Props> = ({ content }) => {
   for (let definition in definitions) {
     let explanation = definitions[definition];
     const overlay = (
-      <Popover title={definition} id={`tooltip-${definition}`}>
-        {explanation}
+      <Popover id={`tooltip-${definition}`}>
+        <Popover.Title>{definition}</Popover.Title>
+        <Popover.Content>{explanation}</Popover.Content>
       </Popover>
     );
 

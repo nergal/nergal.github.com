@@ -24,6 +24,8 @@
       "Redux": "A predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.",
 
       "Django": "A free and open-source web framework, written in Python, which follows the model-view-template (MVT) architectural pattern",
+      "Flusk": "A micro web framework written in Python",
+      "Hasura": "BaaS tool that provides developers with GraphQL APIs for Postgres applications",
 
       "Jenkins": "An open source automation server written in Java",
       "Docker": "An open source project that automates the deployment of Linux applications inside software containers",
@@ -136,18 +138,26 @@
         {
           "order": 20,
           "title": "Frameworks",
-          "value": ["Angular", "NodeJS", "Dropwizard", "Yii2", "Django"]
+          "value": [
+            "React",
+            "Angular",
+            "NodeJS",
+            "Dropwizard",
+            "Yii2",
+            "Django"
+          ]
         },
         {
           "order": 30,
           "title": "Servers",
-          "value": ["pm2", "forever", "PHP-FPM", "MySQL", "nginx"]
+          "value": ["pm2", "flusk", "PHP-FPM", "MySQL", "nginx"]
         },
         {
           "order": 40,
           "title": "Misc. keywords",
           "value": [
             "git",
+            "aws",
             "jenkins",
             "api",
             "atlassian stack",
@@ -161,6 +171,22 @@
       "header": "Professional Experience",
       "template": "experience",
       "content": [
+        {
+          "company": "Majid Al Futtaim Group",
+          "companyType": "Holding company",
+          "companyUrl": "https://www.majidalfuttaim.com/en",
+          "vendor": "Softserve",
+          "vendorUrl": "https://www.softserveinc.com/",
+          "location": ["Kyiv, Ukraine", "Dubai, AE"],
+          "startDate": "2019-09-02",
+          "endDate": null,
+          "title": "Lead Web Developer",
+          "responsibilities": [
+            "Creating a design of an analytics tool based on DS predictions for retail business needs (React, Hasura, Flusk)",
+            "Leading a frontend development team",
+            "Conduct workflow and integration processes between the UX, frontend, backend, and data engineering teams"
+          ]
+        },
         {
           "company": "The International Olympic Committee",
           "companyType": "Nonprofit independent international organisation",
