@@ -9,6 +9,10 @@
 		"nergalgithubcomKinesis": {
 			"service": "Kinesis",
 			"providerPlugin": "awscloudformation"
+		},
+		"nergalgithubcom": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
 		}
 	}
 }

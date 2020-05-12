@@ -1,0 +1,21 @@
+{
+    "appName": "nergalgithubcom",
+    "roleName": "pinpointLambdaRolebc2b932a",
+    "cloudformationPolicyName": "cloudformationPolicybc2b932a",
+    "cloudWatchPolicyName": "cloudWatchPolicybc2b932a",
+    "pinpointPolicyName": "pinpointPolicybc2b932a",
+    "authPolicyName": "pinpoint_amplify_bc2b932a",
+    "unauthPolicyName": "pinpoint_amplify_bc2b932a",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
