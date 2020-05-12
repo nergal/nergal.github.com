@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import React, { FC, useCallback } from "react";
+import { Analytics } from "aws-amplify";
 
 type Props = {
   name: string;
@@ -6,17 +7,28 @@ type Props = {
 };
 
 const VendorBadge: FC<Props> = ({ name, url }) => {
+  const onLinkClick = useCallback(() => {
+    Analytics.record({ name: "vendor.link", value: url });
+  }, [url]);
+
   if (!name) return null;
-  if (url)
+
+  if (url) {
     return (
       <span className="vendor">
         (at{" "}
-        <a target="_blank" rel="noopener noreferrer" href={url}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onLinkClick}
+          href={url}
+        >
           {name}
         </a>
         )
       </span>
     );
+  }
   return <span className="vendor">(at {name})</span>;
 };
 
