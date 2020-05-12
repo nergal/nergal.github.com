@@ -1,0 +1,14 @@
+{
+	"auth": {
+		"cognito58e6443f": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"analytics": {
+		"nergalgithubcomKinesis": {
+			"service": "Kinesis",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

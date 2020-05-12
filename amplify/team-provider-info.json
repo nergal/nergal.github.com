@@ -1,0 +1,20 @@
+{
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-nergalgithubcom-production-141002-authRole",
+            "UnauthRoleArn": "arn:aws:iam::153174678217:role/amplify-nergalgithubcom-production-141002-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::153174678217:role/amplify-nergalgithubcom-production-141002-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-nergalgithubcom-production-141002-deployment",
+            "UnauthRoleName": "amplify-nergalgithubcom-production-141002-unauthRole",
+            "StackName": "amplify-nergalgithubcom-production-141002",
+            "StackId": "arn:aws:cloudformation:eu-west-1:153174678217:stack/amplify-nergalgithubcom-production-141002/223fe7e0-9441-11ea-9435-06c1d1eeaccc",
+            "AmplifyAppId": "d2uxbb8n47638o"
+        },
+        "categories": {
+            "auth": {
+                "cognito58e6443f": {}
+            }
+        }
+    }
+}

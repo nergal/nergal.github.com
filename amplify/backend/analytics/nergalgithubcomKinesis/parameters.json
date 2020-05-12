@@ -1,0 +1,12 @@
+{
+    "kinesisStreamName": "nergalgithubcomKinesis",
+    "kinesisStreamShardCount": 1,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authPolicyName": "kinesis_amplify_08f7af2f",
+    "unauthPolicyName": "kinesis_amplify_08f7af2f"
+}
