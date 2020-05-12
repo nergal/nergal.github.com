@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import React, { FC, useCallback } from "react";
+import { Analytics } from "aws-amplify";
 import VendorBadge from "./VendorBadge";
 
 type Props = {
@@ -12,6 +13,10 @@ const CompanyBadge: FC<Props> = ({ item: company }) => {
       {company.company && ` "${company.company}"`}
     </span>
   );
+
+  const onLinkClick = useCallback(() => {
+    Analytics.record({ name: "company.link", value: company.companyUrl });
+  }, [company]);
 
   return (
     <h3>
