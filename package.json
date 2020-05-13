@@ -21,7 +21,7 @@
     "react-ga": "^2.7.0",
     "react-scripts": "3.4.1",
     "react-string-replace": "^0.4.4",
-    "typescript": "~3.7.2"
+    "typescript": "~3.9.2"
   },
   "scripts": {
     "start": "react-scripts start",
