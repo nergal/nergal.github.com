@@ -11,7 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
-    "aws-amplify": "^3.0.10",
+    "aws-amplify": "^3.0.14",
     "bootstrap": "^4.4.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.14.1",
