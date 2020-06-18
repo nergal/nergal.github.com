@@ -21,7 +21,12 @@ const CompanyBadge: FC<Props> = ({ item: company }) => {
   return (
     <h3>
       {company.companyUrl ? (
-        <a target="_blank" rel="noopener noreferrer" href={company.companyUrl}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onLinkClick}
+          href={company.companyUrl}
+        >
           {companyString}
         </a>
       ) : (
