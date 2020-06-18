@@ -1,8 +1,8 @@
 import React, { FC, ReactNode, useContext } from "react";
-import DefinitionContext from "../DefinitionContext";
-import { OverlayTrigger } from "react-bootstrap";
+import { OverlayTrigger, Popover } from "react-bootstrap";
 import reactStringReplace from "react-string-replace";
-import AnalyticsPopover from "./AnalyticsPopover";
+// import { Analytics } from "aws-amplify";
+import DefinitionContext from "../DefinitionContext";
 
 type Props = {
   content: ReactNode;
@@ -15,6 +15,10 @@ const ExperienceRow: FC<Props> = ({ content }) => {
   for (let definition in definitions) {
     let explanation = definitions[definition];
 
+    // useEffect(() => {
+    //   Analytics.record({ name: "popover.show", value: definition });
+    // }, [definition]);
+
     results = reactStringReplace(
       results as string,
       definition,
@@ -22,10 +26,10 @@ const ExperienceRow: FC<Props> = ({ content }) => {
         <OverlayTrigger
           placement="top"
           overlay={
-            <AnalyticsPopover
-              definition={definition}
-              explanation={explanation}
-            />
+            <Popover id={`tooltip-${definition}`}>
+              <Popover.Title>{definition}</Popover.Title>
+              <Popover.Content>{explanation}</Popover.Content>
+            </Popover>
           }
           key={`${definition}-${index}`}
         >
