@@ -172,9 +172,9 @@
       "template": "experience",
       "content": [
         {
-          "company": "Majid Al Futtaim Group",
-          "companyType": "Holding company",
-          "companyUrl": "https://www.majidalfuttaim.com/en",
+          "company": "NDA protected",
+          "companyType": "Retail holding company",
+          "companyUrl": null,
           "vendor": "Softserve",
           "vendorUrl": "https://www.softserveinc.com/",
           "location": ["Kyiv, Ukraine", "Dubai, AE"],
