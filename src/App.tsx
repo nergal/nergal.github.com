@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Analytics } from "aws-amplify";
 import ReactGA from "react-ga";
 import { Row, Col, Container } from "react-bootstrap";
 import DataContext from "./components/DataContext";
@@ -18,21 +17,25 @@ import "./App.scss";
 
 ReactGA.initialize("UA-32170510-1");
 
+type Definition = Record<'key' | 'value', string>;
+
 function App() {
   const [dataset, setDataset] = useState<DataRecord<any>[]>([]);
-  const [definitions, setDefinitions] = useState<Record<string, string>>({});
+  const [definitions, setDefinitions] = useState<Definition[]>([]);
 
   useEffect(() => {
-    const {
-      data,
-      meta: { definitions },
-    } = dataSet;
-
+    const { data } = dataSet;
     setDataset(data);
-    setDefinitions(definitions);
+
+    const fetchDefinitions = async () => {
+      // const definitions = await DataStore.query(Definition);
+      // setDefinitions(definitions);
+    };
+
+    fetchDefinitions();
 
     ReactGA.pageview(window.location.pathname);
-    Analytics.record({name: "page.view"});
+    // Analytics.record({ name: "page.view" });
   }, []);
 
   return (
