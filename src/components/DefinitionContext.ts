@@ -1,6 +1,6 @@
 import React from "react";
+import { Definition } from "../models";
 
-type Definition = Record<'key' | 'value', string>;
 const DefinitionContext = React.createContext<Definition[]>([]);
 
 export default DefinitionContext;
