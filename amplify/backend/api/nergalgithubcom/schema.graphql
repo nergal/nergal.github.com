@@ -1,0 +1,6 @@
+type Definition @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  key: String!
+  value: String!
+}
+ 
