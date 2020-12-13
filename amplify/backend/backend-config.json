@@ -20,5 +20,18 @@
         }
       }
     }
+  },
+  "auth": {
+    "cognito427b693b": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "analytics": {
+    "analyticsCv": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
