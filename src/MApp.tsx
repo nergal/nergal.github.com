@@ -4,7 +4,7 @@ import { Button, Container } from "react-bootstrap";
 import "./mapp.sass";
 
 const ACTIVATION_COUNTDOWN = 60000;
-const URL = 'https://cutt.ly/NhOyjQE';
+const URL = "https://cutt.ly/NhOyjQE";
 
 const MApp: FC<{}> = () => {
   const [isLinkShown, setLinkShown] = useState(false);
@@ -13,12 +13,14 @@ const MApp: FC<{}> = () => {
     setTimeout(() => setLinkShown(true), ACTIVATION_COUNTDOWN);
   }, []);
 
-  useEffect(() => window.scrollTo(0, document.body.scrollHeight), [isLinkShown]);
+  useEffect(() => window.scrollTo(0, document.body.scrollHeight), [
+    isLinkShown,
+  ]);
 
   const onButtonClick = useCallback(() => {
-    localStorage.setItem('presents-are-closed', "1");
-    
-    const win = window.open(URL, '_blank');
+    localStorage.setItem("presents-are-closed", "1");
+
+    const win = window.open(URL, "_blank");
     win?.focus();
 
     setTimeout(() => document.location.reload(), 300);
@@ -41,7 +43,7 @@ const MApp: FC<{}> = () => {
         </p>
         <p>
           Ще цього року я доглядав та лікував кота, іноді навіть дозволяв йому
-          дурісти вночі та скидувати птичі дрібнички зі столу.
+          дуріти вночі та скидати птичі дрібнички зі столу.
         </p>
         <p>
           Тож, якщо ми вже вирішили, що сумнівів щодо того, чи дарувати
