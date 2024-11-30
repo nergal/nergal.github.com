@@ -10,17 +10,17 @@ export const overviewAtom = atom<OverviewContent[]>([
 	{
 		order: 10,
 		title: "Languages",
-		value: ["Javascript", "Java", "Python", "PHP", "Shell"],
+		value: ["Typescript", "Rust", "Python", "Java"],
 	},
 	{
 		order: 20,
 		title: "Frameworks",
-		value: ["React", "Angular", "NodeJS", "Dropwizard", "Yii2", "Django"],
+		value: ["React", "Tauri", "Angular", "NodeJS"],
 	},
 	{
 		order: 30,
 		title: "Servers",
-		value: ["pm2", "flask", "PHP-FPM", "MySQL", "nginx"],
+		value: ["pm2", "flask", "PostgreSQL", "nginx"],
 	},
 	{
 		order: 40,
@@ -30,8 +30,6 @@ export const overviewAtom = atom<OverviewContent[]>([
 			"aws",
 			"jenkins",
 			"api",
-			"atlassian stack",
-			"redmine",
 			"docker",
 		],
 	},
