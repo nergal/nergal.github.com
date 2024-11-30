@@ -1,19 +1,26 @@
-import React, { FC } from "react";
+import { useAtomValue } from "jotai";
 import { sortBy } from "lodash";
+import React from "react";
+import { overviewAtom } from "../../atoms/overview";
 
-const Overview: FC<DataProps<OverviewContent[]>> = ({ content }) => (
-  <section>
-    <dl className="row">
-      {sortBy(content, "order").map((item, index) => [
-        <dt className="col-sm-3 mb-0 text-right" key={`dt-${index}`}>
-          {item.title}
-        </dt>,
-        <dd className="col-sm-9 mb-0" key={`dd-${index}`}>
-          {item.value.join(", ")}
-        </dd>,
-      ])}
-    </dl>
-  </section>
-);
+export const Overview = () => {
+	const overviewContent = useAtomValue(overviewAtom);
 
-export default Overview;
+	return (
+		<section>
+			<dl className="grid grid-cols-3">
+				{sortBy(overviewContent, "order").map((item) => [
+					<dt
+						className="col-span-1 mb-0 text-right font-bold"
+						key={`dt-${item.title}`}
+					>
+						{item.title}
+					</dt>,
+					<dd className="col-span-2 mb-0 ml-4" key={`dd-${item.title}`}>
+						{item.value.join(", ")}
+					</dd>,
+				])}
+			</dl>
+		</section>
+	);
+};

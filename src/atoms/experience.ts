@@ -1,0 +1,197 @@
+import { atom } from "jotai";
+
+export type ExperienceContent = {
+	location: string[];
+	startDate: string;
+	endDate: string;
+	responsibilities: string[];
+	company?: string;
+	companyType: string;
+	companyUrl?: string;
+	vendor: string;
+	vendorUrl?: string;
+	title: string;
+};
+
+export const experienceAtom = atom<ExperienceContent[]>([
+	{
+		company: "NDA protected",
+		companyType: "Retail holding company",
+		companyUrl: null,
+		vendor: "Softserve",
+		vendorUrl: "https://www.softserveinc.com/",
+		location: ["Kyiv, Ukraine", "Dubai, AE"],
+		startDate: "2019-09-02",
+		endDate: null,
+		title: "Lead Web Developer",
+		responsibilities: [
+			"Creating a design of an analytics tool based on DS predictions for retail business needs (React, Hasura, Flask)",
+			"Leading a frontend development team",
+			"Conduct workflow and integration processes between the UX, frontend, backend, and data engineering teams",
+		],
+	},
+	{
+		company: "The International Olympic Committee",
+		companyType: "Nonprofit independent international organisation",
+		companyUrl: "https://www.olympic.org/the-ioc",
+		vendor: "Luxoft",
+		vendorUrl: "https://www.luxoft.com/",
+		location: ["Kyiv, Ukraine", "Madrid, ES"],
+		startDate: "2018-04-05",
+		endDate: "2019-09-02",
+		title: "Lead Web Developer",
+		responsibilities: [
+			"Leading a frontend development team",
+			"Deep integration with backend API and data analytics teams",
+			"Participating in pre-sale activities for the client needs",
+			"Creating a design of the management panel for a data warehouse split into several web-applications for different business processes (React, redux, redux-saga)",
+		],
+	},
+	{
+		company: "Markit",
+		companyType: "Financial information and services company ",
+		companyUrl: "https://ihsmarkit.com/index.html",
+		vendor: "Luxoft",
+		vendorUrl: "https://www.luxoft.com/",
+		location: ["Kyiv, Ukraine", "London, UK"],
+		startDate: "2017-11-01",
+		endDate: "2018-04-05",
+		title: "Lead Web Developer",
+		responsibilities: [
+			"Creating system design from scratch using Angular and @ngrx/store",
+			"Design interactions between complicated data hierarchy using Flux architecture",
+			"Implementing data transformations using strict functional approach only (RxJS)",
+			"Deep teamwork with backend team to develop good user experience",
+		],
+	},
+	{
+		company: "Halliburton",
+		companyType: "Oil field service company ",
+		companyUrl: "http://www.halliburton.com/en-US/default.page",
+		vendor: "Luxoft",
+		vendorUrl: "https://www.luxoft.com/",
+		location: ["Kyiv, Ukraine", "Houston, TX"],
+		startDate: "2017-02-14",
+		endDate: "2017-10-30",
+		title: "Lead Web Developer",
+		responsibilities: [
+			"Creating a collaborative development system from scratch (Angular / NodeJS)",
+			"Integrating frontend code with various solutions like AWS Lambda, Jenkins, Gitlab API, Terraform scripts through middle tier microservices",
+			"Creating release process for team’s internal needs (Jenkins, Gradle, RPM, Artifactory)",
+		],
+	},
+	{
+		company: "Hotwire.com",
+		companyType: "Travel website ",
+		companyUrl: "https://www.hotwire.com/",
+		vendor: "Luxoft",
+		vendorUrl: "https://www.luxoft.com/",
+		location: ["Kyiv, Ukraine", "San Francisco, CA"],
+		startDate: "2015-09-01",
+		endDate: "2017-02-14",
+		title: "Senior Web Developer",
+		responsibilities: [
+			"Supporting existing landing page engine (PHP)",
+			"Participated in long-term POC to investigate ways of acquiring cheap traffic to existing search pages (AngularJS, NodeJS)",
+			"Integrating internal API to existing API-proxy (Dropwizard / Java)",
+			"Supporting of legacy Spring application (Spring / Java)",
+			"Creating release process for team’s internal needs (Jenkins, Grunt, Docker, nginx)",
+		],
+	},
+	{
+		company: "FanMedia",
+		companyType: "Advertising agency",
+		companyUrl: null,
+		vendor: null,
+		vendorUrl: null,
+		location: ["Kyiv, Ukraine"],
+		startDate: "2009-09-01",
+		endDate: "2010-04-01",
+		title: "Web Developer",
+		responsibilities: [
+			"Support weather portal Meteoprog and its localized versions (36 languages) (CodeIgniter / PHP)",
+			"Developed new sections on the site (PHP, Javascript)",
+		],
+	},
+	{
+		company: "Recreativ",
+		companyType: "Advertising network",
+		companyUrl: "https://www.recreativ.ua/",
+		vendor: null,
+		vendorUrl: null,
+		location: ["Kyiv, Ukraine"],
+		startDate: "2014-06-01",
+		endDate: "2015-09-01",
+		title: "Senior Web Developer",
+		responsibilities: [
+			"Software design frontend and backend for the new dashboard (Yii2 / PHP, MySQL)",
+			"Software design and developing traffic analysis tools (Javascript, NodeJS, MySQL)",
+		],
+	},
+	{
+		company: "ITOP",
+		companyType: "Portal network",
+		companyUrl: "http://itop.net/",
+		vendor: null,
+		vendorUrl: null,
+		location: ["Kyiv, Ukraine"],
+		startDate: "2013-02-01",
+		endDate: "2014-06-01",
+		title: "Chief Technical Officer, CTO",
+		responsibilities: [
+			"Organized production infrastructure for interaction of various tech. stacks including PHP application w/ MySQL database, .NET application w/ MSSQL, media storage and streaming server",
+			"Software design frontend and backend parts for music site (Yii / PHP, MySQL, MSSQL)",
+			"Development frontend part of ITOP.fm including page-through music player (jQuery)",
+			"Software design and developing e-library w/ subscription to various government codes and its editions w/ explanations from professional lawyers (Yii2 / PHP, jQuery, LMD, Grunt, MySQL)",
+		],
+	},
+	{
+		company: "Open Media Group",
+		companyType: "Media holding",
+		companyUrl: "http://www.openmedia.com.ua/en/index.html",
+		vendor: null,
+		vendorUrl: null,
+		location: ["Kyiv, Ukraine"],
+		startDate: "2012-01-01",
+		endDate: "2013-02-01",
+		title: "Chief Technical Officer, CTO",
+		responsibilities: [
+			"Planning IT resource management (14 people in direct subjection)",
+			"Prioritizing tasks in the view of business interests",
+			"Communicating w/ customers, formatting business requirements",
+			"Integrated release process and versioning for internal projects (Jenkins, Redmine, Phing, Gitosis)",
+			"Participated in development brand new version of Meteoprog.ua, as well as few commercial projects (Kohana / PHP, jQuery)",
+			"Software design and developing application for Google Chrome to participate in special Chrome build (Backbone, PHP)",
+		],
+	},
+	{
+		company: "Open Media Group",
+		companyType: "Media holding",
+		companyUrl: "http://www.openmedia.com.ua/en/index.html",
+		vendor: null,
+		vendorUrl: null,
+		location: ["Kyiv, Ukraine"],
+		startDate: "2010-04-01",
+		endDate: "2012-01-01",
+		title: "Lead Developer",
+		responsibilities: [
+			"Created software design and developed Likar.info, Uaua.info and hochu.ua (Zend / PHP), support Aromart.ua (Django / Python, PostgreSQL)",
+			"Refactor, redesign and support of existing Android application (Android SDK / Java)",
+			"Developed various projects for Christmas, Easter, Love Day specials and universal CMS for performing contests w/ polling and uploading user’s data (including algorithms to prevent fake votes and cheating) (Zend / PHP, jQuery, MySQL)",
+			"Designed interaction w/ WRF (The Weather and Forecast) model to grab weather forecasts for Meteoprog.ua (Kohana / PHP, MySQL)",
+			"Reaction on illegal invasions and elimination consequences and causes of a penetration. Develop software for system heuristic analysis structure of a project to find out malware injections. Partially security audit for third-party code (Python, SQLite, nginx)",
+		],
+	},
+	{
+		company: null,
+		companyType: "freelance",
+		companyUrl: null,
+		vendor: null,
+		vendorUrl: null,
+		location: ["Svitlovodsk, Ukraine"],
+		startDate: "2006-01-01",
+		endDate: "2009-09-01",
+		title: "PHP Developer",
+		responsibilities: [],
+	},
+]);

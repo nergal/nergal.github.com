@@ -1,15 +1,20 @@
-import React, { FC } from "react";
 import { sortBy } from "lodash";
-import ExperienceItem from "../utils/ExperienceItem";
+import React from "react";
 
-const Experience: FC<DataProps<ExperienceContent[]>> = ({ content }) => (
-  <section>
-    {sortBy(content, (item) => new Date(item.startDate).getTime())
-      .reverse()
-      .map((item, index) => (
-        <ExperienceItem key={index} item={item} />
-      ))}
-  </section>
-);
+import { useAtomValue } from "jotai";
+import { experienceAtom } from "../../atoms/experience";
+import { ExperienceItem } from "../utils/ExperienceItem";
 
-export default Experience;
+export const Experience = () => {
+	const experienceContent = useAtomValue(experienceAtom);
+
+	return (
+		<section>
+			{sortBy(experienceContent, (item) => new Date(item.startDate).getTime())
+				.reverse()
+				.map((item) => (
+					<ExperienceItem key={item.title} item={item} />
+				))}
+		</section>
+	);
+};

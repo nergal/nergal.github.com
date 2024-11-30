@@ -1,14 +1,18 @@
-import React, { FC } from "react";
+import { useAtomValue } from "jotai";
+import React from "react";
+import { additionalAtom } from "../../atoms/additionally";
 
-const Additionally: FC<DataProps<string[]>> = ({ header, content = [] }) => (
-  <section>
-    <h3>{header}</h3>
-    <ul>
-      {content.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </section>
-);
+export const Additionally = () => {
+	const additionalContent = useAtomValue(additionalAtom);
 
-export default Additionally;
+	return (
+		<section>
+			<h3 className="text-3xl mb-3">Additionally</h3>
+			<ul className="list-disc list-inside pl-5">
+				{additionalContent.map((item) => (
+					<li key={item}>{item}</li>
+				))}
+			</ul>
+		</section>
+	);
+};

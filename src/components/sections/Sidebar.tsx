@@ -1,34 +1,40 @@
-import React, { FC, useCallback } from "react";
-import { Row, Col } from "react-bootstrap";
-import { Analytics } from "aws-amplify";
+import { useAtomValue } from "jotai";
+import Image from "next/image";
+import React from "react";
+import { sidebarAtom } from "../../atoms/sidebar";
 
-const Sidebar: FC<DataProps<SidebarContent>> = ({
-  content: { links = [] },
-}) => {
-  const colWidth = Math.floor(12 / links.length);
+import facebookIcon from "../../assets/images/facebook.svg";
+import gitIcon from "../../assets/images/git.svg";
+import linkedinIcon from "../../assets/images/linkedin.svg";
+import skypeIcon from "../../assets/images/skype.svg";
 
-  const onLinkClick = useCallback(
-    (value: string) => () => {
-      Analytics.record({ name: "sidebar.link", value });
-    },
-    []
-  );
+export const Sidebar = () => {
+	const sidebarContent = useAtomValue(sidebarAtom);
+	const colWidth = Math.floor(12 / sidebarContent.length);
 
-  return (
-    <Row style={{ height: colWidth * 18 + "px" }} className="iconset">
-      {links.map((link, index) => (
-        <Col xs={colWidth} className="text-center" key={index}>
-          <a
-            className={`icon ${link.cssClass}`}
-            onClick={onLinkClick(link.linkUrl)}
-            href={link.linkUrl}
-          >
-            {link.title}
-          </a>
-        </Col>
-      ))}
-    </Row>
-  );
+	const classMap = {
+		github: gitIcon,
+		linkedin: linkedinIcon,
+		skype: skypeIcon,
+		facebook: facebookIcon,
+	};
+
+	return (
+		<div className="flex flex-row items-center justify-between flex-nowrap mx-2">
+			{sidebarContent
+				.filter((x) => Object.keys(classMap).includes(x.cssClass))
+				.map((link) => (
+					<div className="text-center opacity-85" key={link.cssClass}>
+						<a href={link.linkUrl}>
+							<Image
+								src={classMap[link.cssClass]}
+								alt={link.title}
+								width={64}
+								height={64}
+							/>
+						</a>
+					</div>
+				))}
+		</div>
+	);
 };
-
-export default Sidebar;

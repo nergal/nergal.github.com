@@ -1,44 +1,29 @@
-import React, { FC, ReactNode, useContext } from "react";
-import { find } from "lodash";
-import { OverlayTrigger, Popover } from "react-bootstrap";
+import { useAtomValue } from "jotai";
+import React, { type FC, type ReactNode } from "react";
 import reactStringReplace from "react-string-replace";
-// import { Analytics } from "aws-amplify";
-import DefinitionContext from "../DefinitionContext";
+
+import { definitionsAtom } from "../../atoms/definitions";
 
 type Props = {
-  content: ReactNode;
+	content: ReactNode;
 };
 
-const ExperienceRow: FC<Props> = ({ content }) => {
-  const definitions = useContext(DefinitionContext);
-  let results = content;
+export const ExperienceRow: FC<Props> = ({ content }) => {
+	const definitions = useAtomValue(definitionsAtom);
+	let results = content;
 
-  for (let definition of definitions) {
-    // useEffect(() => {
-    //   Analytics.record({ name: "popover.show", value: definition });
-    // }, [definition]);
+	for (const [key, value] of Object.entries(definitions)) {
+		results = reactStringReplace(results as string, key, (match: string) => (
+			<span className="group relative w-max" key={`tooltip-${key}`}>
+				<mark className="underline decoration-1 underline-offset-4 decoration-black decoration-dotted bg-transparent">
+					{match}
+				</mark>
+				<span className="max-w-52 z-50 pointer-events-none absolute -top-7 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+					{value}
+				</span>
+			</span>
+		));
+	}
 
-    results = reactStringReplace(
-      results as string,
-      definition.key,
-      (match: string, index: number) => (
-        <OverlayTrigger
-          placement="top"
-          overlay={
-            <Popover id={`tooltip-${definition.id}`}>
-              <Popover.Title>{definition.key}</Popover.Title>
-              <Popover.Content>{definition.value}</Popover.Content>
-            </Popover>
-          }
-          key={`${definition.id}-${index}`}
-        >
-          <mark>{match}</mark>
-        </OverlayTrigger>
-      )
-    );
-  }
-
-  return <>{results}</>;
+	return <>{results}</>;
 };
-
-export default ExperienceRow;
