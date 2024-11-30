@@ -7,9 +7,6 @@ const nextConfig = {
     },
     output: 'export',
     distDir: 'build',
-    experimental: {
-        useLightningcss: true,
-    },
   }
    
   module.exports = nextConfig
