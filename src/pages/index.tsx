@@ -18,10 +18,10 @@ function App() {
 	return (
 		<div className="container p-20">
 			<div className="grid grid-cols-12 gap-4">
-				<div className="md:col-span-4 lg:col-span-6 sm:col-span-11">
+				<div className="col-span-12 lg:col-span-6">
 					<General />
 				</div>
-				<div className="md:col-span-8 lg:col-span-6 sm:col-span-1">
+				<div className="col-span-12 lg:col-span-6">
 					<Overview />
 				</div>
 			</div>
@@ -29,10 +29,10 @@ function App() {
 			<hr className="my-12" />
 
 			<div className="grid grid-cols-12 gap-4">
-				<div className="col-span-3">
+				<div className="lg:col-span-3 col-span-12">
 					<Sidebar />
 				</div>
-				<div className="col-span-9">
+				<div className="lg:col-span-9 col-span-12">
 					<Experience />
 
 					<hr className="my-12" />

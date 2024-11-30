@@ -6,21 +6,18 @@ import { sidebarAtom } from "../../atoms/sidebar";
 import facebookIcon from "../../assets/images/facebook.svg";
 import gitIcon from "../../assets/images/git.svg";
 import linkedinIcon from "../../assets/images/linkedin.svg";
-import skypeIcon from "../../assets/images/skype.svg";
 
 export const Sidebar = () => {
 	const sidebarContent = useAtomValue(sidebarAtom);
-	const colWidth = Math.floor(12 / sidebarContent.length);
 
 	const classMap = {
 		github: gitIcon,
 		linkedin: linkedinIcon,
-		skype: skypeIcon,
 		facebook: facebookIcon,
 	};
 
 	return (
-		<div className="flex flex-row items-center justify-between flex-nowrap mx-2">
+		<div className="flex flex-row items-center justify-between flex-nowrap mx-2 gap-1">
 			{sidebarContent
 				.filter((x) => Object.keys(classMap).includes(x.cssClass))
 				.map((link) => (

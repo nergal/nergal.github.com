@@ -8,7 +8,7 @@ type Props = {
 	item: ExperienceContent;
 };
 
-const dateTimeFormat = new Intl.DateTimeFormat(undefined, {
+const dateTimeFormat = new Intl.DateTimeFormat('en', {
 	year: "numeric",
 	month: "short",
 });
@@ -23,9 +23,9 @@ export const ExperienceItem: FC<Props> = ({ item }) => (
 				.join(" - ")}
 		</div>
 
-		<h4 className="text-2xl font-medium my-2">
+		<h3 className="text-2xl font-medium my-2">
 			{item.location.length > 0 && item.location.join(" / ")}
-		</h4>
+		</h3>
 
 		<ul className="list-disc list-inside pl-5">
 			{item.responsibilities.map((row) => (

@@ -15,7 +15,7 @@ export const CompanyBadge: FC<Props> = ({ item: company }) => {
 	);
 
 	return (
-		<h3 className="text-2xl font-medium capitalize">
+		<h2 className="text-2xl font-medium capitalize">
 			{company.companyUrl ? (
 				<a
 					className="underline decoration-1 underline-offset-4 decoration-black decoration-dotted text-blue-500 hover:text-blue-800"
@@ -30,6 +30,6 @@ export const CompanyBadge: FC<Props> = ({ item: company }) => {
 			)}
 			<VendorBadge name={company.vendor} url={company.vendorUrl} />
 			<small className="text-gray-500"> {company.title}</small>
-		</h3>
+		</h2>
 	);
 };
