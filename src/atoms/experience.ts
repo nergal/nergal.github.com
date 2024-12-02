@@ -43,7 +43,7 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		startDate: "2024-04-02",
 		endDate: "2024-12-02",
 		title: "ETL Engineer",
-		stack: ["NiFi", "MySQL", "PostgreSQL"],
+		stack: ["NiFi", "*SQL"],
 		responsibilities: [
 			"Migrating the legacy database including lots of static files to the new technology stack",
 		],
@@ -58,7 +58,7 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		startDate: "2022-03-02",
 		endDate: "2022-05-02",
 		title: "Lead Web Developer",
-		stack: ["Python", "Tornado", "Q2 SDK"],
+		stack: ["Python", "Tornado", "Q2 Caliper SDK"],
 		responsibilities: [
 			"Elicitation and elaborating the requirements",
 			"Leading a small team to achieve the customers goal"

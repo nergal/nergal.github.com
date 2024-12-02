@@ -7,6 +7,11 @@ export const definitionsAtom = atom<Record<string, string>>({
 	Yii: "An open source, object-oriented, component-based MVC PHP web application framework",
 	Kohana: "A PHP5 HMVC framework",
 	Zend: "An open source, object-oriented web application framework implemented in PHP 5",
+	Tornado: "Python web framework and asynchronous networking library",
+	"Material UI": "React component library that implements Google's Material Design",
+	Tauri: "Framework designed to create cross-platform desktop and mobile applications on Linux, macOS, Windows, Android and iOS using a web frontend",
+	Jotai: "Primitive and flexible state management for React",
+	NiFi: "An easy to use, powerful, and reliable system to process and distribute data",
 
 	Dropwizard:
 		"A Java framework for developing ops-friendly, high-performance, RESTful web services",
@@ -28,6 +33,7 @@ export const definitionsAtom = atom<Record<string, string>>({
 	RxJS: "A library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code",
 	"@ngrx/store":
 		"RxJS powered state management for Angular applications, inspired by Redux",
+	"React Native": "A UI software framework used to develop applications for Android, Android TV, iOS and many others by enabling developers to use the React framework along with native platform capabilities",
 	React: "A JavaScript library for building user interfaces",
 	"Redux-saga":
 		"A library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, easy to test, and better at handling failures",

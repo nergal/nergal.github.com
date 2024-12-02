@@ -1,16 +1,12 @@
 import { useAtomValue } from "jotai";
-import React, { type FC, type ReactNode } from "react";
+import React, { PropsWithChildren, type FC, type ReactNode } from "react";
 import reactStringReplace from "react-string-replace";
 
 import { definitionsAtom } from "../../atoms/definitions";
 
-type Props = {
-	content: ReactNode;
-};
-
-export const ExperienceRow: FC<Props> = ({ content }) => {
+export const ExperienceRow: FC<PropsWithChildren> = ({ children }) => {
 	const definitions = useAtomValue(definitionsAtom);
-	let results = content;
+	let results = children;
 
 	for (const [key, value] of Object.entries(definitions)) {
 		results = reactStringReplace(results as string, key, (match: string) => (
