@@ -3,27 +3,66 @@ import { atom } from "jotai";
 export type ExperienceContent = {
 	location: string[];
 	startDate: string;
-	endDate: string;
+	endDate?: string;
 	responsibilities: string[];
 	company?: string;
 	companyType: string;
 	companyUrl?: string;
-	vendor: string;
+	vendor?: string;
 	vendorUrl?: string;
 	title: string;
+	stack?: string[];
 };
 
 export const experienceAtom = atom<ExperienceContent[]>([
 	{
+		company: "Embed",
+		companyType: "Arcade payment system",
+		companyUrl: 'https://www.embedcard.com/en/',
+		vendor: 'Softserve',
+		vendorUrl: "https://www.softserveinc.com/",
+		location: ["Kyiv, Ukraine", "Singapore, SG"],
+		startDate: "2022-11-11",
+		endDate: undefined,
+		title: "Lead Web Developer",
+		stack: ["React", "Material UI", "Tauri", "Jotai", "Redux"],
+		responsibilities: [
+			"Design and develop a POS application for entertainment centers",
+			"Reengineering the legacy approaches in the brand new codebase",
+			"Design and develop a kiosk self-service application",
+			"Leading frontend and cross-functional teams",
+			"Evaluation and mitigation technical risks"
+		],
+	},
+	{
+		company: "Mural",
+		companyType: "Collaborative intelligence company",
+		companyUrl: 'https://mural.co',
+		vendor: 'Softserve',
+		vendorUrl: "https://www.softserveinc.com/",
+		location: ["Kyiv, Ukraine", "Mendoza, AG", "Madrid, ES"],
+		startDate: "2020-09-02",
+		endDate: "2022-10-11",
+		title: "Lead Web Developer",
+		stack: ["React", "React Native"],
+		responsibilities: [
+			"Design and develop an application for Android as a PoC of a hybrid applications approach",
+			"Design and develop full-featured hybrid application for mobile, tablet and big factor (Surface Hub) platforms",
+			"Provide feature parity between web and handheld versions of the app",
+			"Oversee complicated features like MAM/MDM authentication, CI/CD process, etc.",
+		],
+	},
+	{
 		company: "NDA protected",
 		companyType: "Retail holding company",
-		companyUrl: null,
+		companyUrl: undefined,
 		vendor: "Softserve",
 		vendorUrl: "https://www.softserveinc.com/",
 		location: ["Kyiv, Ukraine", "Dubai, AE"],
 		startDate: "2019-09-02",
-		endDate: null,
+		endDate: "2020-09-02",
 		title: "Lead Web Developer",
+		stack: ["React", "Material UI", "GraphQL", "Hasura", "Python"],
 		responsibilities: [
 			"Creating a design of an analytics tool based on DS predictions for retail business needs (React, Hasura, Flask)",
 			"Leading a frontend development team",
@@ -101,9 +140,9 @@ export const experienceAtom = atom<ExperienceContent[]>([
 	{
 		company: "FanMedia",
 		companyType: "Advertising agency",
-		companyUrl: null,
-		vendor: null,
-		vendorUrl: null,
+		companyUrl: undefined,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Kyiv, Ukraine"],
 		startDate: "2009-09-01",
 		endDate: "2010-04-01",
@@ -117,8 +156,8 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		company: "Recreativ",
 		companyType: "Advertising network",
 		companyUrl: "https://www.recreativ.ua/",
-		vendor: null,
-		vendorUrl: null,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Kyiv, Ukraine"],
 		startDate: "2014-06-01",
 		endDate: "2015-09-01",
@@ -132,8 +171,8 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		company: "ITOP",
 		companyType: "Portal network",
 		companyUrl: "http://itop.net/",
-		vendor: null,
-		vendorUrl: null,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Kyiv, Ukraine"],
 		startDate: "2013-02-01",
 		endDate: "2014-06-01",
@@ -149,8 +188,8 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		company: "Open Media Group",
 		companyType: "Media holding",
 		companyUrl: "http://www.openmedia.com.ua/en/index.html",
-		vendor: null,
-		vendorUrl: null,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Kyiv, Ukraine"],
 		startDate: "2012-01-01",
 		endDate: "2013-02-01",
@@ -168,8 +207,8 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		company: "Open Media Group",
 		companyType: "Media holding",
 		companyUrl: "http://www.openmedia.com.ua/en/index.html",
-		vendor: null,
-		vendorUrl: null,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Kyiv, Ukraine"],
 		startDate: "2010-04-01",
 		endDate: "2012-01-01",
@@ -183,11 +222,11 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		],
 	},
 	{
-		company: null,
+		company: undefined,
 		companyType: "freelance",
-		companyUrl: null,
-		vendor: null,
-		vendorUrl: null,
+		companyUrl: undefined,
+		vendor: undefined,
+		vendorUrl: undefined,
 		location: ["Svitlovodsk, Ukraine"],
 		startDate: "2006-01-01",
 		endDate: "2009-09-01",
