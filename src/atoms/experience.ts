@@ -35,6 +35,36 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		],
 	},
 	{
+		company: "NDA protected",
+		companyType: "Mil-tech domain",
+		vendor: 'Softserve',
+		vendorUrl: "https://www.softserveinc.com/",
+		location: ["Kyiv, Ukraine"],
+		startDate: "2024-04-02",
+		endDate: "2024-12-02",
+		title: "ETL Engineer",
+		stack: ["NiFi", "MySQL", "PostgreSQL"],
+		responsibilities: [
+			"Migrating the legacy database including lots of static files to the new technology stack",
+		],
+	},
+	{
+		company: "Q2",
+		companyType: "Digital Banking Solutions",
+		companyUrl: 'https://www.q2.com/',
+		vendor: 'Softserve',
+		vendorUrl: "https://www.softserveinc.com/",
+		location: ["Kyiv, Ukraine"],
+		startDate: "2022-03-02",
+		endDate: "2022-05-02",
+		title: "Lead Web Developer",
+		stack: ["Python", "Tornado", "Q2 SDK"],
+		responsibilities: [
+			"Elicitation and elaborating the requirements",
+			"Leading a small team to achieve the customers goal"
+		],
+	},
+	{
 		company: "Mural",
 		companyType: "Collaborative intelligence company",
 		companyUrl: 'https://mural.co',
