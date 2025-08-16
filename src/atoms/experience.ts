@@ -23,7 +23,7 @@ export const experienceAtom = atom<ExperienceContent[]>([
 		vendorUrl: "https://www.softserveinc.com/",
 		location: ["Kyiv, Ukraine", "Singapore, SG"],
 		startDate: "2022-11-11",
-		endDate: undefined,
+		endDate: "2025-05-31",
 		title: "Lead Web Developer",
 		stack: ["React", "Material UI", "Tauri", "Jotai", "Redux"],
 		responsibilities: [
