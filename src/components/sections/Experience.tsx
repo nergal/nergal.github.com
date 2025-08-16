@@ -13,7 +13,7 @@ export const Experience = () => {
 			{sortBy(experienceContent, (item) => new Date(item.startDate).getTime())
 				.reverse()
 				.map((item) => (
-					<ExperienceItem key={item.title} item={item} />
+					<ExperienceItem key={item.startDate} item={item} />
 				))}
 		</section>
 	);

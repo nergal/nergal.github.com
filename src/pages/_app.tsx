@@ -2,6 +2,7 @@ import Head from "next/head";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					content="Discover the professional portfolio and CV of Artem Poliukhovych, a software engineer with expertise in the software development"
 				/>
 			</Head>
+			<GoogleAnalytics trackPageViews />
 			<Component {...pageProps} />
 		</>
 	);
